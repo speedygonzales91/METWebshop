@@ -1,0 +1,47 @@
+﻿@page
+@model METWebShop.Pages.ShoppingCartModel
+@{
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <img src="~/images/accordions/Kosar.png" class="img-fluid" />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">TERMÉK</th>
+                        <th scope="col">MENNYISÉG</th>
+                        <th scope="col">ÁR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Products != null)
+                    {
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr>
+                                <td><img class="img-fluid" src="~/images/products/@product.ImagePath" alt="Random Image" style="max-height: 60px;"> @product.Name</td>
+                                <td>3</td>
+                                <td>@product.Price</td>
+                            </tr>
+                        }
+                    }
+
+                    <tr>
+                        <td>ÖSSZESEN</td>
+                        <td></td>
+                        <td>13000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>RENDELÉS ELKÜLDÉSÉHEZ NE FELEJTSD EL MEGADNI KÉZBESÍTÉSI ADATAIDAT.</p>
+            <a asp-page="./Order"><img src="~/images/accordions/KezbesitesiAdatok.png" class="img-fluid" /></a>
+        </div>
+    </div>
+</div>

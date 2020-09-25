@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - METWebShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <img src="~/images/visualElements/Fejlec.png" class="img-fluid" />
+    </header>
+
+        <div class="row w-100">
+            <div class="col-11">
+                <p>MEGNYÍLTAK A METFIT STORE KAPUI! ITT A LEHETŐSÉG, HOGY BEVÁLTSD ÉRTÉKES PONTJAIDAT!</p>
+                <p>HA BÁRMILYEN KÉRDÉSED LENNE, VAGY ELAKADSZ A FOLYAMATBAN, AKKOR KERESS MINKET A METHU_CORPORATESERVICES@MET.COM CÍMEN.</p>
+            </div>
+            <div class="col-1">
+                <img src="~/images/visualElements/Taska.png" style="max-height: 40px;"/>
+            </div>
+        </div>
+        <main role="main" class="pb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="~/images/visualElements/NoBal.png" style="max-height: 380px;"/>
+                    </div>
+                    <div class="col-8">
+                        @RenderBody()
+                    </div>
+                    <div class="col-2">
+                        <img src="~/images/visualElements/FerfiJobb.png" style="max-height: 380px;"/>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - METWebShop - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

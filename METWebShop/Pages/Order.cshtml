@@ -1,0 +1,65 @@
+﻿@page
+@model METWebShop.Pages.OrderModel
+@{
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <img src="~/images/accordions/KezbesitesiAdatok.png" class="img-fluid" />
+        </div>
+    </div>
+    <form method="post" id="form1">
+        <div class="form-group row">
+            <label for="ZipCode" class="col-sm-3 col-form-label" asp-for="Order.ZipCode">IRÁNYÍTÓSZÁM:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext" asp-for="Order.ZipCode" id="ZipCode">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="City" class="col-sm-3 col-form-label">TELEPÜLÉS:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext" id="City" asp-for="Order.City">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Address" class="col-sm-3 col-form-label">PONTOS CÍM:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext" id="Address" asp-for="Order.Address">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Mobile" class="col-sm-3 col-form-label">MOBILTELEFONSZÁM:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext" id="Mobile" asp-for="Order.PhoneNumber">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Info" class="col-sm-3 col-form-label">EGYÉB INFORMÁCIÓ A FUTÁRNAK:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control-plaintext" id="Info" asp-for="Order.InfoToDelivery">
+            </div>
+        </div>
+
+
+        <div class="row mb-4">
+            <div class="col-12">
+               <a href="#popupModel" role="button" id="ShowPopup" data-toggle="modal" onclick="document.getElementById('form1').submit();" ><img src="~/images/accordions/MegerositemEsRendeles.png" class="img-fluid" /></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div id="popupModel" class="modal fade " role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div>
+                <img src="~/images/visualElements/FelugroAblak.png" style="max-height: 600px;" />
+            </div>
+        </div>
+    </div>
+</div>
